@@ -76,9 +76,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="dijkstra.h" />
     <ClInclude Include="graph.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dijkstra.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

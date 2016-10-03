@@ -14,11 +14,14 @@ struct ListNode;
 typedef ListNode * List;
 typedef List Position;
 typedef List * ListPrt;
+typedef Edge * EdgePrt;
 struct ListNode
 {
-	Edge edges;
+	EdgePrt edges;
 	List Next;
 };
+
+bool operator <(const ListNode &l1,const ListNode & l2);
 struct Graph
 {
 	unsigned int NodeCount;

@@ -4,14 +4,19 @@ std::istream &operator>>(std::istream &is ,Edge &e)
 	is>>e.source>>e.destination>>e.weight;
 	return is;
 }
+bool operator <(const ListNode &l1,const ListNode & l2)
+{
+	return l1.edges->weight<l2.edges->weight;
+}
 GraphPrt InitializeGraph(unsigned int NodeCount)
 {
 	GraphPrt G=new Graph;
 	G->NodeCount=NodeCount;
 	G->TheAdjacents=new List[G->NodeCount];
-	for (unsigned int i=1;i<G->NodeCount+1;++i)
+	for (unsigned int i=1;i<G->NodeCount+1;++i)//we think the Vertex is larger 0
 	{
 		G->TheAdjacents[i]=new ListNode;
+		G->TheAdjacents[i]->edges=new Edge;
 		G->TheAdjacents[i]->Next=nullptr;
 	}
 	return G;
@@ -33,9 +38,12 @@ void GraphAddNode(Edge E,GraphPrt G)
 	Position P=Find(E.source,G);
 	if (P==nullptr){
 		P=new ListNode;
-		P->edges.source=E.source;
-		P->edges.destination=E.destination;
-		P->edges.weight=E.weight;
-		P->Next=nullptr;
+		List L=G->TheAdjacents[E.source];
+		P->edges=new Edge;
+		P->edges->source=E.source;
+		P->edges->destination=E.destination;
+		P->edges->weight=E.weight;
+		P->Next=L->Next;
+		L->Next=P;
 	}
 }
