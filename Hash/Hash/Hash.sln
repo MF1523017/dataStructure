@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hash", "Hash\Hash.vcxproj", "{865CD104-7CCF-4A8A-A646-D4AD879A1732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{865CD104-7CCF-4A8A-A646-D4AD879A1732}.Debug|Win32.ActiveCfg = Debug|Win32
+		{865CD104-7CCF-4A8A-A646-D4AD879A1732}.Debug|Win32.Build.0 = Debug|Win32
+		{865CD104-7CCF-4A8A-A646-D4AD879A1732}.Release|Win32.ActiveCfg = Release|Win32
+		{865CD104-7CCF-4A8A-A646-D4AD879A1732}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
