@@ -28,7 +28,7 @@ int main(int argc,char ** argv)
 		cout<<aa[i].a<<endl;
 #endif
 	GraphPrt G=InitializeGraph(7);
-	Edge e;
+	ListNode e;
 	std::ifstream  input("graph.txt");
 	while(input>>e)
 	{
@@ -37,5 +37,6 @@ int main(int argc,char ** argv)
 	Vertex Start=1;
 	TablePrt T=InitTable(Start,G);
 	Dijkstra(Start,G,T);
+	PrintPath(5,T);
 	return 0;
 }

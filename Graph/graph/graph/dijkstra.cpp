@@ -4,7 +4,7 @@
 TablePrt InitTable(Vertex Start,GraphPrt G)
 {
 	TablePrt T=new Table[G->NodeCount];
-	for (unsigned int i=1;i<G->NodeCount+1;i++)
+	for (int i=0;i<G->NodeCount;i++)
 	{
 		T[i]=new TableEntry;
 		T[i]->Header=new ListNode;
@@ -16,6 +16,15 @@ TablePrt InitTable(Vertex Start,GraphPrt G)
 	T[Start]->Dist=0;
 	return T;
 }
+void PrintPath(Vertex v,TablePrt T)
+{
+	if(T[v]->Path!=NotAVertex)
+	{
+		PrintPath(T[v]->Path,T);
+		printf(" to ");
+	}
+	printf("%d",v);
+}
 void Dijkstra(Vertex Start,GraphPrt G,TablePrt T)
 {
 	std::priority_queue<List>q;
@@ -24,16 +33,17 @@ void Dijkstra(Vertex Start,GraphPrt G,TablePrt T)
 	{
 		Position P=q.top();
 		q.pop();
-		T[P->edges->source]->Known=true;
+		
 		while(P)
 		{
-			if(!T[P->edges->destination]->Known)
+			T[P->source]->Known=true;
+			if(!T[P->destination]->Known)
 			{
-				if(T[P->edges->source]->Dist+P->edges->weight<T[P->edges->destination]->Dist)
+				if(T[P->source]->Dist+P->weight<T[P->destination]->Dist)
 				{
-					T[P->edges->destination]->Dist=T[P->edges->source]->Dist+P->edges->weight;
-					T[P->edges->destination]->Path=P->edges->source;
-					q.push(T[P->edges->destination]->Header->Next);
+					T[P->destination]->Dist=T[P->source]->Dist+P->weight;
+					T[P->destination]->Path=P->source;
+					q.push(T[P->destination]->Header->Next);
 				}
 			}
 			P=P->Next;
