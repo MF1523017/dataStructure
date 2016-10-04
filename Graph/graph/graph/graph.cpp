@@ -1,16 +1,19 @@
 #include "graph.h"
+//input the source ,destination and weight value
 std::istream &operator>>(std::istream &is ,ListNode &e)
 {
 	is>>e.source>>e.destination>>e.weight;
 	return is;
 }
+//priority_queue will pop according to the edge weight (less)
 bool operator <(const ListNode &l1,const ListNode & l2)
 {
 	return l1.weight<l2.weight;
 }
+//like hash table init
 GraphPrt InitializeGraph(int NodeCount)
 {
-	GraphPrt G=new Graph;
+	GraphPrt G=new Graph;//
 	G->NodeCount=NodeCount;
 	G->TheAdjacents=new List[G->NodeCount];
 	//the i must begin at 0 ,or you will want to fuch the new result;
@@ -31,6 +34,7 @@ Position Find(Vertex V,GraphPrt G)
 	return P;
 
 }
+//insert the first node,next the header;
 void GraphAddNode(ListNode E,GraphPrt G)
 {
 	if(E.weight==0) 

@@ -22,7 +22,7 @@ bool operator <(const ListNode &l1,const ListNode & l2);
 struct Graph
 {
 	int NodeCount;
-	ListPrt TheAdjacents;
+	ListPrt TheAdjacents;//use adjacents table to save the node adjacent neighbors
 };
 
 GraphPrt InitializeGraph(int NodeCount);
