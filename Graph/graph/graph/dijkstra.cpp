@@ -36,7 +36,7 @@ void PrintDist(Vertex v,TablePrt T)
 }
 void Dijkstra(Vertex Start,GraphPrt G,TablePrt T)
 {
-	std::priority_queue<List>q;
+	std::priority_queue<ListNode>q;
 	q.push(T[Start]->Header->Next);
 	while(!q.empty())
 	{
