@@ -1,6 +1,8 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include<istream>
+const int NotAVertex = -1;
+const int Infinity = 0xffffffff / 2;
 typedef int Vertex;
 
 struct Graph;
@@ -18,7 +20,7 @@ struct ListNode
 };
 std::istream &operator>>(std::istream &is ,ListNode &e);
 
-bool operator <(const ListNode &l1,const ListNode & l2);
+bool operator <( ListNode l1,ListNode  l2);
 struct Graph
 {
 	int NodeCount;

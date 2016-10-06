@@ -36,12 +36,20 @@ void PrintDist(Vertex v,TablePrt T)
 }
 void Dijkstra(Vertex Start,GraphPrt G,TablePrt T)
 {
-	std::priority_queue<ListNode>q;
-	q.push(T[Start]->Header->Next);
+	std::priority_queue<ListNode>q;//only ListNode works
+	q.push(*(T[Start]->Header->Next));//the first ListNode values;
+	bool firstElement = true;//the start Vertex processes flag
 	while(!q.empty())
 	{
-		Position P=q.top();
+		ListNode L=q.top();//pop the smallest weight values' ListNode Vertex 
 		q.pop();
+		Position P;
+		if(firstElement){//Start Vertex
+			P = T[Start]->Header->Next;
+			firstElement = false;
+		}
+		else//other Vertex
+			P = T[L.destination]->Header->Next;//P point to the destination Vertex
 		while(P)
 		{
 			Vertex src=P->source;//source Vertex
@@ -53,7 +61,7 @@ void Dijkstra(Vertex Start,GraphPrt G,TablePrt T)
 				{
 					T[dst]->Dist=T[src]->Dist+P->weight;
 					T[dst]->Path=src;
-					q.push(T[dst]->Header->Next);//push the neartest Vertex
+					q.push(*(P));//push the neartest Vertex
 				}
 			}
 			P=P->Next;

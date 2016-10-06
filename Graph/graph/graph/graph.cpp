@@ -6,9 +6,9 @@ std::istream &operator>>(std::istream &is ,ListNode &e)
 	return is;
 }
 //priority_queue will pop according to the edge weight (less)
-bool operator <(const ListNode &l1,const ListNode & l2)
+bool operator <(ListNode l1,ListNode l2)
 {
-	return l1.weight<l2.weight;
+	return l1.weight>l2.weight;//less
 }
 //like hash table init
 GraphPrt InitializeGraph(int NodeCount)

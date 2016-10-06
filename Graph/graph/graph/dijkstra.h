@@ -12,8 +12,9 @@ struct TableEntry
 	int Dist;
 	Vertex Path;
 };
-const int NotAVertex=-1;
-const int Infinity=0xffffffff/2;
+
+extern const int NotAVertex;
+extern const int Infinity;
 typedef struct TableEntry * Table;
 typedef Table * TablePrt;
 TablePrt InitTable(Vertex Start,GraphPrt G);
