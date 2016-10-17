@@ -76,11 +76,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="biconnected.h" />
     <ClInclude Include="dijkstra.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="prim.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="biconnected.cpp" />
     <ClCompile Include="dijkstra.cpp" />
     <ClCompile Include="graph.cpp" />
     <ClCompile Include="main.cpp" />

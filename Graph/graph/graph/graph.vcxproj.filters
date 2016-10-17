@@ -24,6 +24,9 @@
     <ClInclude Include="prim.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="biconnected.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="graph.cpp">
@@ -36,6 +39,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="prim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="biconnected.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

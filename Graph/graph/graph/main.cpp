@@ -1,6 +1,7 @@
 #include"graph.h"
 #include"dijkstra.h"
 #include"prim.h"
+#include"biconnected.h"
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -39,7 +40,7 @@ int main(int argc,char ** argv)
 	PrintPath(End,T);
 	PrintDist(End,T);
 #endif
-#if 1
+#if 0
 	std::ifstream  input("graphPrim.txt");//contain the graph info:source ,destination ,weight
 	while (input >> e)
 	{
@@ -53,5 +54,17 @@ int main(int argc,char ** argv)
 	PrintTreeEdge(G, T);
 	PrintTreeValue(G, T);
 #endif
+	std::ifstream  input("graphBiconnected.txt");//contain the graph info:source ,destination ,weight
+	while (input >> e)
+	{
+		GraphAddNode(e, G);
+	}
+	Vertex Start;
+	cout << "input the start Vertex: ";
+	cin >> Start;
+	biconnectedTablePrt T = InitBiconnectedTable(Start, G);
+	findArt(Start, T);
+	//printLow(T, G);
+	//printNum(T, G);
 	return 0;
 }
