@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  selection-sort.cpp
+h:\c++\yu\datastructure\datastructure\sort\selection-sort\selection-sort\selection-sort\selection-sort.cpp(10): warning C4018: “<”: 有符号/无符号不匹配
+h:\c++\yu\datastructure\datastructure\sort\selection-sort\selection-sort\selection-sort\selection-sort.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+h:\c++\yu\datastructure\datastructure\sort\selection-sort\selection-sort\selection-sort\selection-sort.cpp(21): warning C4018: “<”: 有符号/无符号不匹配
+  selection-sort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\selection-sort\selection-sort\Debug\selection-sort.exe
+  selection-sort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\selection-sort\selection-sort\Debug\selection-sort.pdb (Full PDB)

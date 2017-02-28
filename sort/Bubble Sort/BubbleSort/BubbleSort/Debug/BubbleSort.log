@@ -1,0 +1,4 @@
+﻿  BubbleSort.cpp
+h:\c++\yu\datastructure\datastructure\sort\bubble sort\bubblesort\bubblesort\bubblesort.cpp(26): warning C4018: “<”: 有符号/无符号不匹配
+  BubbleSort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\Bubble Sort\BubbleSort\Debug\BubbleSort.exe
+  BubbleSort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\Bubble Sort\BubbleSort\Debug\BubbleSort.pdb (Full PDB)

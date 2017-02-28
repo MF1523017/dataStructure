@@ -1,0 +1,28 @@
+﻿  funcPtr.cpp
+  
+  class Derivor	size(16):
+  	+---
+   0	| +--- (base class Base)
+   0	| | {vfptr}
+   4	| | _a
+  	| +---
+   8	| +--- (base class Base1)
+   8	| | {vfptr}
+  	| +---
+  12	| _d
+  	+---
+  
+  Derivor::$vftable@Base@:
+  	| &Derivor_meta
+  	|  0
+   0	| &Derivor::func 
+   1	| &Derivor::g 
+  
+  Derivor::$vftable@Base1@:
+  	| -8
+   0	| &Base1::f 
+  
+  Derivor::func this adjustor: 0
+  Derivor::g this adjustor: 0
+  funcPrinter.vcxproj -> H:\c++\yu\dataStructure\dataStructure\quicksort\funcPrinter\Debug\funcPrinter.exe
+  funcPrinter.vcxproj -> H:\c++\yu\dataStructure\dataStructure\quicksort\funcPrinter\Debug\funcPrinter.pdb (Full PDB)
