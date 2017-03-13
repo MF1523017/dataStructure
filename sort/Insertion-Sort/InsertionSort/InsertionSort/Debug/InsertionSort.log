@@ -1,0 +1,4 @@
+﻿  InsertionSort.cpp
+h:\c++\yu\datastructure\datastructure\sort\insertion-sort\insertionsort\insertionsort\insertionsort.cpp(29): warning C4018: “<”: 有符号/无符号不匹配
+  InsertionSort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\Insertion-Sort\InsertionSort\Debug\InsertionSort.exe
+  InsertionSort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\Insertion-Sort\InsertionSort\Debug\InsertionSort.pdb (Full PDB)

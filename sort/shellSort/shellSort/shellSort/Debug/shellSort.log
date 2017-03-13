@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  shellSort.cpp
+h:\c++\yu\datastructure\datastructure\sort\shellsort\shellsort\shellsort\shellsort.cpp(15): warning C4018: “<”: 有符号/无符号不匹配
+  shellSort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\shellSort\shellSort\Debug\shellSort.exe
+  shellSort.vcxproj -> H:\c++\yu\dataStructure\dataStructure\sort\shellSort\shellSort\Debug\shellSort.pdb (Full PDB)

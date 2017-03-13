@@ -9,3 +9,14 @@ learning data structure decripted by c
 ##Tree
 *	tree: SearchTree
 *	AVLTree:
+
+## Hash
+## Heap
+## sort
+*  bubble sort
+*  heap sort
+*  insertion sort
+*  merge sort
+*  quick sort
+*  selectiong sort
+*  shell sort
